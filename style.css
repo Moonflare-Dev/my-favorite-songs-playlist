@@ -1,0 +1,132 @@
+body {
+    background: #121212;
+    color: white;
+    font-family: "JetBrains Mono", "Noto Sans JP", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("images/background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #b3b3b3;
+    margin-bottom: 40px;
+}
+
+.services a {
+    display: block;
+    max-width: 400px;
+    margin: 15px auto;
+    padding: 16px;
+    border-radius: 12px;
+    background: #282828;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.services a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.services a:hover {
+    transform: scale(1.03);
+    background: #3a3a3a;
+}
+
+.tracklist {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: left;
+
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.tracklist h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.tracklist ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: track;
+}
+
+.tracklist li {
+    counter-increment: track;
+
+    padding: 14px 10px;
+    color: #ffffff;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tracklist li::before {
+    content: counter(track, decimal-leading-zero);
+
+    display: inline-block;
+    width: 45px;
+
+    color: #888;
+    font-size: 14px;
+    font-family: monospace;
+
+    margin-right: 10px;
+}
+
+.track-count {
+    color: #b3b3b3;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 40px 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .services a {
+    width: 100%;
+    box-sizing: border-box;
+    }
+}
